@@ -51,7 +51,7 @@ const UpdateForm = ({ imageData }) => {
         event.preventDefault();
         try {
             const response = await fetch(
-                `http://localhost:3127/items/${imageData.item_id}`,
+                `https://wear-it-all-api.onrender.com//items/${imageData.item_id}`,
                 {
                     method: "PUT",
                     headers: {
