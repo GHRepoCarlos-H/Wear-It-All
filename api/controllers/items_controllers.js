@@ -1,3 +1,4 @@
+//folder controllers file items_controllers.js
 const items = require('express').Router();
 const db = require('../models');
 const { Items } = db;
@@ -27,8 +28,8 @@ items.get('/:name', async (req, res) => {
 
 items.post('/new', async (req, res) => {
     try {
-        const { name, image } = req.body;
-        const newItem = await Items.create({ name, image });
+        const { name, zipcode, description, price, image } = req.body;
+        const newItem = await Items.create({ name,zipcode, description, price, image });
         res.status(200).json({
             message: 'Succesfully inserted a new Item',
             data: newItem,
@@ -65,13 +66,13 @@ items.delete('/:id', async (req, res) => {
 items.put('/:id', async (req, res) => {
     try {
         const itemId = req.params.id;
-        const { name, image } = req.body;
+        const { name, zipcode, description, price, image } = req.body;
         const itemToUpdate = await Items.findByPk(itemId);
         if (!itemToUpdate) {
             return res.status(404).json({ message: 'Item not found' });
         }
         await Items.update(
-            { name, image },
+            { name, zipcode, description, price, image },
             {
                 where: {
                     item_id: itemId,

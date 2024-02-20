@@ -8,7 +8,11 @@ Content-Type: application/json
 {
   "item_id": "",
   "name": "blazer",
+  "zipcode": "zipcode",
+  "description": "description",
+  "price": "price",
   "image": "image"
+
 }
 ###
 DELETE http://localhost:3127/items/17

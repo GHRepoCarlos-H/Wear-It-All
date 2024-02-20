@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Container, Form, Button, Modal } from "react-bootstrap";
 
 const UpdateForm = ({ imageData }) => {
-    const [image, setImage] = useState(null);
+    const [imageUrl, setImageUrl] = useState("");
     const [price, setPrice] = useState("");
     const [title, setTitle] = useState("");
     const [zipcode, setZipcode] = useState("");
@@ -20,7 +20,8 @@ const UpdateForm = ({ imageData }) => {
             const reader = new FileReader();
 
             reader.onload = (e) => {
-                setImage(e.target.result);
+                // Set image data
+                setImageUrl(e.target.result);
             };
 
             reader.readAsDataURL(file);
@@ -38,7 +39,8 @@ const UpdateForm = ({ imageData }) => {
             const reader = new FileReader();
 
             reader.onload = (e) => {
-                setImage(e.target.result);
+                // Set image data
+                setImageUrl(e.target.result);
             };
 
             reader.readAsDataURL(file);
@@ -58,7 +60,10 @@ const UpdateForm = ({ imageData }) => {
                     body: JSON.stringify({
                         item_id: "",
                         name: title,
-                        image: price,
+                        zipcode: zipcode,
+                        price: price,
+                        image: imageUrl,
+                        description: description
                     }),
                 }
             );
@@ -76,7 +81,7 @@ const UpdateForm = ({ imageData }) => {
             setTimeout(() => setShowNetworkErrorModal(false), 5000); // Close modal after 5 seconds
         }
 
-        setImage(null);
+        setImageUrl(""); // Reset image URL
         setPrice("");
         setTitle("");
         setZipcode("");
@@ -99,9 +104,9 @@ const UpdateForm = ({ imageData }) => {
                             onDrop={handleDrop}
                             onDragOver={handleDragOver}
                         >
-                            {image ? (
+                            {imageUrl ? (
                                 <img
-                                    src={image}
+                                    src={imageUrl}
                                     alt="Uploaded"
                                     style={{ maxWidth: "100%" }}
                                 />
@@ -119,13 +124,13 @@ const UpdateForm = ({ imageData }) => {
                         />
                     </Form.Group>
 
-                    <Form.Group controlId="formPrice">
+                    <Form.Group controlId="formImage">
                         <Form.Label>Image URL</Form.Label>
                         <Form.Control
                             type="text"
                             placeholder="Enter Image URL Here"
-                            value={price}
-                            onChange={(e) => setPrice(e.target.value)}
+                            value={imageUrl}
+                            onChange={(e) => setImageUrl(e.target.value)}
                         />
                     </Form.Group>
 

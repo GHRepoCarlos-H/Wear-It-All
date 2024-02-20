@@ -1,3 +1,4 @@
+//api folder server.js file
 const express = require('express');
 const cors = require('cors');
 require('dotenv').config();
