@@ -22,6 +22,9 @@ const itemsController = require('./controllers/items_controllers');
 app.use('/items', itemsController);
 app.use('/items/new', itemsController);
 
-app.listen(process.env.PORT, () => {
-    console.log(`Server has started on port ${process.env.PORT}`);
+const port = process.env.PORT || 3000; // Use PORT variable from .env file, or default to 3000
+const url = process.env.URL || `http://localhost:${port}`; // Use URL variable from .env file, or default to http://localhost:PORT
+
+app.listen(port, () => {
+    console.log(`Server is listening at ${url}`);
 });
