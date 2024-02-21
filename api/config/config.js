@@ -23,5 +23,3 @@ module.exports = {
             
         },
 };
-
-postgres://weardpg-cnae61ol5elc7396l3s0-a.oregon-postgres.render.com/wear_it_again_database
