@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 //folder config file config.js
 module.exports = {
         development: {
@@ -24,7 +23,4 @@ module.exports = {
             
         },
 };
-=======
-
->>>>>>> ecd405526433228c4ae31a240371cf11f2677910
 
