@@ -1,25 +1,26 @@
 
 module.exports = {
         development: {
-                username: "wear_it_again_database_user",
-                password: "8jJ1erSdc894RqSJyFyLQXnbyKL8akCJ",
-                database: "wear_it_again_database",
-                hostname: "dpg-cnae61ol5elc7396l3s0-a.oregon-postgres.render.com",
+                username: "postgres",
+                password: "E3aDd25De4gf5BebcGgDA4C*aDg3Ed5b",
+                database: "railway",
+                hostname: "viaduct.proxy.rlwy.net",
                 dialect: "postgres",
             },
         test: {
-                username: "wear_it_again_database_user",
-                password: "8jJ1erSdc894RqSJyFyLQXnbyKL8akCJ",
-                database: "wear_it_again_database",
-                hostname: "dpg-cnae61ol5elc7396l3s0-a.oregon-postgres.render.com",
+                username: "postgres",
+                password: "E3aDd25De4gf5BebcGgDA4C*aDg3Ed5b",
+                database: "railway",
+                hostname: "viaduct.proxy.rlwy.net",
                 dialect: "postgres",
         },
         production: {
-                username: "wear_it_again_database_user",
-                password: "8jJ1erSdc894RqSJyFyLQXnbyKL8akCJ",
-                database: "wear_it_again_database",
-                hostname: "dpg-cnae61ol5elc7396l3s0-a.oregon-postgres.render.com",
+                username: "postgres",
+                password: "E3aDd25De4gf5BebcGgDA4C*aDg3Ed5b",
+                database: "railway",
+                hostname: "viaduct.proxy.rlwy.net",
                 dialect: "postgres",
             
         },
 };
+
