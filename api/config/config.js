@@ -1,4 +1,4 @@
-
+//folder config file config.js
 module.exports = {
         development: {
                 username: "postgres",
