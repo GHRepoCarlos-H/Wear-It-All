@@ -47,6 +47,15 @@ Are you tired of seeing your clothes unused and cluttered around? 😄 Let us as
 - Ensure proper configuration of API database settings.
 - Confirm PGadmin4 is running with created data/tables.
 
+## Deployment
+
+The project is deployed and accessible online. You can visit the deployed version using the following links:
+
+- [Production Deployment](https://wear-it-all-api.onrender.com) - This is the live production version of the       website backend deployment.
+
+- [Production Deployment](https://wear-it-all.onrender.com) - This is the live production version of the           website front-end deployment.
+
+
 ## Features:
 
 Main Page: Navigate seamlessly between buying, selling, and gifting based on your selected choice.
